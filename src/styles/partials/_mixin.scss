@@ -1,0 +1,52 @@
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin flexMC($main, $cross) {
+
+  display: flex;
+
+  @if $main =='start' {
+    justify-content: start;
+  }
+
+  @if $main =='center' {
+    justify-content: center;
+  }
+
+  @if $main =='end' {
+    justify-content: end;
+  }
+
+  @if $main =='between' {
+    justify-content: space-between;
+  }
+
+  @if $main =='around' {
+    justify-content: space-around;
+  }
+
+  @if $main =='evenly' {
+    justify-content: space-evenly;
+  }
+
+  @if cross=='baseline' {
+    align-items: baseline;
+  }
+
+  @if cross=='center' {
+    align-items: center;
+  }
+
+  @if cross=='start' {
+    align-items: flex-start;
+  }
+
+  @if cross=='end' {
+    align-items: flex-end;
+  }
+
+
+}

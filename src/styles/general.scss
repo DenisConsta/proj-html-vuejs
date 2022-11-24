@@ -1,9 +1,17 @@
 @use './partials/variables' as *;
+@use './partials/mixin' as *;
 @import '../../node_modules/@fontsource/roboto-condensed/400.css';
 
 
 
 .debug,
-*{
+* {
   border: 1px solid firebrick;
 }
+
+
+  li{
+    a{
+      text-decoration: none;
+    }
+  }
