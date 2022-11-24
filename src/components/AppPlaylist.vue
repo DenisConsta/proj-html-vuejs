@@ -1,15 +1,15 @@
 <script>
 export default {
-  name: "AppHeader",
+  name: "AppPlaylist",
 };
 </script>
 
 <template>
-  <header>
+  <section>
     <div class="container">
-      <h3>Header</h3>
+      <h3>AppPlaylist</h3>
     </div>  
-  </header>
+  </section>
 </template>
 
 <style lang="scss" scoped>
