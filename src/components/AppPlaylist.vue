@@ -15,4 +15,16 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixin" as *;
+
+section{
+  height: 1015px;
+  background-image: linear-gradient(to right bottom, #0219ea, #d3000c);
+
+  .container{
+    @include flexMC('center', 'center');
+    height: 100%;
+    color: white;
+  }
+}
+
 </style>

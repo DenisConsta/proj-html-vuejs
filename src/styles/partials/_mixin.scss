@@ -32,19 +32,19 @@
     justify-content: space-evenly;
   }
 
-  @if cross=='baseline' {
+  @if $cross=='baseline' {
     align-items: baseline;
   }
 
-  @if cross=='center' {
+  @if $cross=='center' {
     align-items: center;
   }
 
-  @if cross=='start' {
+  @if $cross=='start' {
     align-items: flex-start;
   }
 
-  @if cross=='end' {
+  @if $cross=='end' {
     align-items: flex-end;
   }
 

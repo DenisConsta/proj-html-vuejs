@@ -34,7 +34,6 @@ export default {
     <AppHero/>
     <AppPlaylist/>
     <AppCTA/>
-    <AppLatestsArticles/>
     <AppTestimonials/>
     <AppEvent/>
   </main>
