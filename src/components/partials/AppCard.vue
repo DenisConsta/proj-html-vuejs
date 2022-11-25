@@ -15,13 +15,14 @@ export default {
 
 
 <template>
-  <div class="my-card debug">
+  <div class="my-card debug my-radius">
     <img
+      class="my-radius"
       v-show="info.image != null"
       :src="`/src/assets/images/${info.image}`"
       alt=""
     />
-    <div class="overlay"></div>
+    <div class="overlay my-radius"></div>
     <div class="text">
       <h3>{{ info.title }}</h3>
       <h4>{{ info.subtitle }}</h4>
@@ -34,12 +35,7 @@ export default {
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
 
-.my-card,
-.my-card img,
-.my-card .overlay {
-  border-radius: 0.5rem;
-  border-bottom-right-radius: 3rem;
-}
+
 .my-card {
   min-height: 435px;
   padding: 2.5rem;

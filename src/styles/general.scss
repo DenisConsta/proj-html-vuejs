@@ -16,6 +16,11 @@ html body {
   border: 1px solid firebrick;
 }
 
+.my-radius {
+  border-radius: 0.5rem;
+  border-bottom-right-radius: 3rem;
+}
+
 li {
   a {
     text-decoration: none;
