@@ -8,7 +8,7 @@ import AppLatestsArticles from './components/AppLatestsArticles.vue'
 import AppTestimonials from './components/AppTestimonials.vue'
 import AppEvent from './components/AppEvent.vue'
 import AppFooter from './components/AppFooter.vue';
-
+import AppChannel from './components/AppChannel.vue'
 
 
 export default {
@@ -17,6 +17,7 @@ export default {
     AppHeader,
     AppHero,
     AppPlaylist,
+    AppChannel,
     AppCTA,
     AppLatestsArticles,
     AppTestimonials,
@@ -33,7 +34,10 @@ export default {
   <main>
     <AppHero/>
     <AppPlaylist/>
+    <AppChannel/>
+    <AppLatestsArticles/>
     <AppCTA/>
+    <AppLatestsArticles/>
     <AppTestimonials/>
     <AppEvent/>
   </main>

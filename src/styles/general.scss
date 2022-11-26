@@ -12,6 +12,12 @@ html body {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
+li {
+  a {
+    text-decoration: none;
+  }
+}
+
 .debug {
   border: 1px solid firebrick;
 }
@@ -21,14 +27,12 @@ html body {
   border-bottom-right-radius: 3rem;
 }
 
-li {
-  a {
-    text-decoration: none;
-  }
-}
-
 .my-red {
   color: $color-monza;
+}
+
+.my-dodger {
+  color: $color-dodgerBlue;
 }
 
 button.uncolored {
@@ -52,4 +56,19 @@ button.uncolored {
   background: linear-gradient(to left,
       rgba(0, 0, 0, 0) 25%,
       rgba(0, 0, 0, 1) 60%);
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  cursor: pointer;
+
+  padding: 2rem 2.3rem;
+  border-radius: 50%;
+
+  color: $color-dodgerBlue;
+  background-color: white;
 }

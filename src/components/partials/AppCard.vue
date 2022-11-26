@@ -3,7 +3,6 @@ export default {
   name: "AppCard",
   props: {
     info: {
-      title: String,
       default: () => ({}),
     },
   },
@@ -15,14 +14,17 @@ export default {
 
 
 <template>
-  <div class="my-card debug my-radius">
+  <div class="my-card debug " :class="{'my-radius' : info.radius}">
     <img
-      class="my-radius"
+      :class="{'my-radius' : info.radius}"
       v-show="info.image != null"
       :src="`/src/assets/images/${info.image}`"
       alt=""
     />
-    <div class="overlay my-radius"></div>
+    <div v-show="info.overlay" class="overlay" :class="{' my-radius' : info.radius}"></div>
+    <div v-show="info.play" class="play">
+      <i class="fa-solid fa-play"></i>
+    </div>
     <div class="text">
       <h3>{{ info.title }}</h3>
       <h4>{{ info.subtitle }}</h4>
@@ -34,7 +36,6 @@ export default {
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
-
 
 .my-card {
   min-height: 435px;

@@ -20,8 +20,7 @@ export default {
 
 
 section {
-  height: 730px;
-  background-image: url("../assets/images/banner1-2x.jpg");
+
 
 
   color: white;

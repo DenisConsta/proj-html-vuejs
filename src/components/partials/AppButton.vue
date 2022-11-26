@@ -22,7 +22,7 @@ export default {
 
   <button> 
     <i v-show="beforeIcon != null" :class="beforeIcon"></i>
-    {{text}} 
+    <span>{{text}}</span>
     <i v-show="afterIcon != null " :class="afterIcon"></i>
   </button>
 

@@ -20,9 +20,6 @@ export default {
     <div class="container debug">
       <div class="row row-cols-1 row-cols-lg-3 debug">
         <div class="col">
-          <!--           <AppCard :image="`url(${store.firstCardImg})` "  />
-  
- -->
           <AppCard :info="store.firstCard" />
         </div>
         <div class="col">

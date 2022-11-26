@@ -7,7 +7,7 @@ export default {
     AppButton,
   },
 };
-</script>
+</script> 
 
 <template>
   <section class="bg-overlay">
@@ -54,14 +54,13 @@ export default {
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixin" as *;
 
-section *{
+section * {
   border: 1px solid firebrick;
 }
 
 section {
   height: 670px;
   background-image: url("../assets/images/slider82x-scaled.jpg");
-
 
   color: white;
 
@@ -76,29 +75,13 @@ section {
     word-break: normal;
   }
 
-
-
   h1 {
     font-size: 3.8rem;
+    white-space: nowrap;
   }
   .buttons {
     @include flexMC("start", "center");
     gap: 1rem;
-  }
-
-  .play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-block;
-    cursor: pointer;
-
-    padding: 2rem 2.3rem;
-    border-radius: 50%;
-
-    color: $color-dodgerBlue;
-    background-color: white;
   }
 }
 </style>
