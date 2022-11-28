@@ -29,14 +29,13 @@ export default {
     v-else-if="info.type === 'unbordered'"
     :class="[{ unbordered: info.type === 'unbordered' }]"
   >
-  <!-- :src="`/src/assets/images/${info.image}}`" -->
-    <img :src="`/src/assets/images/${info.image}`" alt="">
-    <p>{{info.text}}</p>
+    <!-- :src="`/src/assets/images/${info.image}}`" -->
+    <img :src="`/src/assets/images/${info.image}`" alt="" />
+    <p>{{ info.text }}</p>
     <a v-show="info.anchor != null" href="#">
       {{ info.anchor }}
       <i class="fa-solid fa-chevron-right"></i>
     </a>
-
   </div>
 </template>
 
@@ -52,13 +51,33 @@ div {
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   height: 550px;
+  cursor: pointer;
 
+  transition: 0.3s all;
+
+  &:hover {
+    & {
+      outline: 10px solid $color-dodgerBlue;
+    }
+  }
   .bordered {
     border: 5px solid $color-dodgerBlue;
+    transition: 0.3s all;
+
+    &:hover {
+      & > i {
+        color: $color-dodgerBlue;
+      }
+
+      & {
+        outline: 10px solid $color-dodgerBlue;
+      }
+    }
 
     & > i {
       font-size: 4rem;
       margin-bottom: 2rem;
+      transition: 0.3s all;
     }
 
     h3 {
@@ -78,9 +97,9 @@ div {
       font-size: 1.1rem;
       font-weight: 600;
       text-decoration: none;
-      transition: .3s all;
+      transition: 0.3s all;
 
-      &:hover{
+      &:hover {
         color: $color-dodgerBlue;
       }
 
@@ -94,20 +113,25 @@ div {
     color: black;
     height: 350px;
 
-    img{
+    img {
       max-height: 5rem;
       margin-bottom: 1.2rem;
     }
 
-    p{
+    p {
       font-size: 1.1rem;
       color: $color-jumbo;
     }
 
-    a{
+    a {
       color: black;
       text-decoration: none;
       cursor: pointer;
+      transition: 0.3s all;
+
+      &:hover {
+        color: $color-dodgerBlue;
+      }
     }
   }
 }

@@ -67,6 +67,11 @@ section {
     &>span{
       font-size: 1.1rem;
       font-weight: 500;
+      transition: .3s all;
+      cursor: pointer;
+      &:hover{
+        color: $color-dodgerBlue;
+      }
 
       & i{
         margin-left: .5rem;

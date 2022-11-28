@@ -65,6 +65,11 @@ export default {
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixin" as *;
 .top {
+
+  .play{
+    padding: 2rem 2.5rem;
+  }
+
   .col:last-of-type {
     flex-direction: column;
     @include flexMC("start", "start");

@@ -97,6 +97,12 @@ footer {
         margin-bottom: 1rem;
         font-size: 1.15rem;      
         cursor:pointer;
+        transition: .3s all;
+
+        &:hover{
+          color: $color-dodgerBlue;
+        }
+
       }
     }
 
@@ -119,6 +125,14 @@ footer {
       color: $color-burntSienna;
       cursor:pointer;
       
+      i{
+        transition: .3s all;
+
+        &:hover{
+          color: $color-dodgerBlue;
+        }
+      }
+
     }
   }
   .bottom {
@@ -126,6 +140,7 @@ footer {
     @include flexMC("center", "center");
     color: white;
     padding: 3rem 0;
+    text-align: center;
   }
 }
 </style>
