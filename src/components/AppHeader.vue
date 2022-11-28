@@ -6,6 +6,10 @@ export default {
   components: {
     AppButton,
   },
+  props:{
+    obj: Object,
+
+  }
 };
 </script>
 
@@ -17,7 +21,7 @@ export default {
       <nav>
         <!--? Logo -->
         <div class="logo">
-          <img src="../../src/assets/images/logo-2x.png" alt="" />
+          <img :src="`/src/assets/images/${obj.logo}`" alt="" />
         </div>
 
         <!-- ? nav-items -->
@@ -25,21 +29,16 @@ export default {
           <!-- ? Links -->
           <div class="links d-none d-lg-block">
             <ul>
-              <li><a class="active" href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Videos</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Store</a></li>
+              <li v-for="(item, index) in obj.menu" :key="index"><a :class="{'active' : item.isActive}" href="#" class="text-capitalize">{{item.text}}</a></li>
             </ul>
           </div>
 
           <!-- ? Button -->
-          <AppButton class="d-none d-sm-block" text="Schedule a workout" />
+          <AppButton class="d-none d-sm-block" :text="obj.textBtn" />
 
           <!-- ? Icons -->
-          <i class="fa-solid fa-cart-shopping"></i>
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i v-for="(icon, i) in obj.icons" :key="i" :class="icon"></i>
+          
         </div>
       </nav>
     </div>

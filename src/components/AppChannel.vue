@@ -1,11 +1,13 @@
 <script>
-
-import AppButton from './partials/AppButton.vue';
+import AppButton from "./partials/AppButton.vue";
 
 export default {
   name: "AppChannel",
   components: {
     AppButton,
+  },
+  props: {
+    obj: Object,
   },
 };
 </script>
@@ -13,11 +15,11 @@ export default {
 <template>
   <section>
     <!-- ? top -->
-    <div class="top debug">
-      <div class="container-fluid debug h-100">
-        <div class="row row-cols-1 row-cols-lg-2 h-100 debug">
+    <div class="top ">
+      <div class="container-fluid  h-100">
+        <div class="row row-cols-1 row-cols-lg-2 h-100 ">
           <!-- ? Img col -->
-          <div class="col debug my-radius img-col">
+          <div class="col  my-radius img-col">
             <!-- ? Overlay -->
             <div class="overlay"></div>
 
@@ -28,31 +30,28 @@ export default {
           </div>
 
           <!-- ? text col -->
-          <div class="col debug">
-            <h5 class="my-dodger">Tune up your workouts</h5>
-            <h2>The best health & fitness advice online</h2>
+          <div class="col ">
+            <h5 class="my-dodger">{{ obj.subtitle }}</h5>
+            <h2>{{ obj.title }}</h2>
             <!-- ? Channel -->
             <div class="channel">
-              <img src="../assets/images/unnamed.jpg" alt="" />
+              <img :src="`/src/assets/images/${obj.channel.logo}`" alt="" />
               <div class="text">
-                <span>ThemeFusion</span>
+                <span>{{ obj.channel.name }}</span>
                 <AppButton
-                  class="btn-lite"
-                  text="YouTube"
-                  beforeIcon="fa-brands fa-youtube"
+                  :class="obj.channel.btn.classes"
+                  :text="obj.channel.btn.text"
+                  :beforeIcon="obj.channel.btn.before"
                 />
               </div>
             </div>
 
-            <p>
-              Arcu eu facilisi ut quisque placerat nunc habitant. Magna semper
-              mauris, venenatis, leo integer sit pellentesque.
-            </p>
+            <p>{{ obj.text }}</p>
 
             <AppButton
-              class="youtube-red"
-              text="Visit my YouTube channel"
-              beforeIcon="fa-brands fa-youtube"
+              :class="obj.btn.classes"
+              :text="obj.btn.text"
+              :beforeIcon="obj.btn.before"
             />
           </div>
         </div>
@@ -63,11 +62,9 @@ export default {
 
 
 <style lang="scss" scoped>
-
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixin" as *;
 .top {
-
   .col:last-of-type {
     flex-direction: column;
     @include flexMC("start", "start");

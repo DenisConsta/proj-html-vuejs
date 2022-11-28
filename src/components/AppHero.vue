@@ -6,6 +6,9 @@ export default {
   components: {
     AppButton,
   },
+  props: {
+    obj: Object,
+  },
 };
 </script> 
 
@@ -17,24 +20,19 @@ export default {
       <div class="row h-100">
         <!-- ? Left col -->
         <div class="col">
-          <h3 class="my-red">Certified fitness professional</h3>
-          <h1>Take control of your health</h1>
-          <p>
-            Curatibur non nulla sit amet nisi tempus convallis quis ac lectus
-            dolor sit amet.
-          </p>
+          <h3 class="my-red">{{ obj.subtitle }}</h3>
+          <h1>{{ obj.title }}</h1>
+          <p>{{ obj.text }}</p>
 
           <!-- ? Buttons -->
           <div class="buttons">
             <AppButton
-              text="Visit my YouTube channel"
-              beforeIcon="fa-brands fa-youtube"
-            >
-            </AppButton>
-            <AppButton
-              class="uncolored"
-              text="Buy Avanda today"
-              afterIcon="fa-solid fa-arrow-right"
+              v-for="(btn, index) in obj.btns"
+              :key="index"
+              :class="btn.classes"
+              :text="btn.text"
+              :beforeIcon="btn.before"
+              :afterIcon="btn.after"
             />
           </div>
         </div>
@@ -54,9 +52,7 @@ export default {
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixin" as *;
 
-section * {
-  border: 1px solid firebrick;
-}
+
 
 section {
   height: 670px;

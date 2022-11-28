@@ -20,10 +20,10 @@ export default {
 <template>
 
   <!-- ? Top -->
-  <section class="top bg-overlay debug">
+  <section class="top bg-overlay ">
     <div class="overlay"></div>
     <div class="container">
-      <div class="text debug">
+      <div class="text ">
         <h2>
           “I’ve failed over and over again in my life. And that is why I
           succeed.”
@@ -42,11 +42,11 @@ export default {
   </section>
 
   <!-- ? Bottom -->
-  <section class="bottom debug">
+  <section class="bottom ">
 
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-        <div v-for="(card, index) in obj" :key="index" class="col debug">
+        <div v-for="(card, index) in obj" :key="index" class="col ">
           <AppTextCard :info="card"/>
         </div>
       </div>

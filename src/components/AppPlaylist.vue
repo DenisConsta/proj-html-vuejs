@@ -20,8 +20,8 @@ export default {
 
 <template>
   <section>
-    <div class="container debug">
-      <div class="row row-cols-1 row-cols-lg-3 debug">
+    <div class="container ">
+      <div class="row row-cols-1 row-cols-lg-3 ">
 
         <!-- ? Col -->
         <div v-for="(card, index) in obj.cards" :key="index" class="col">

@@ -3,7 +3,7 @@ import AppButton from "./partials/AppButton.vue";
 import AppCard from "./partials/AppCard.vue";
 import { store } from "../data/store";
 export default {
-  name: "AppLatestsArticles",
+  name: "AppArticlesPlaylists",
   components: {
     AppButton,
     AppCard,
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <section class="debug">
+  <section class="">
     <div class="container">
       <!-- ? Top text -->
       <div class="top-text">
@@ -36,7 +36,7 @@ export default {
         <div
           v-for="(art, index) in obj.records"
           :key="index"
-          class="col debug"
+          class="col "
         >
           <AppCard class="custom" :info="art.card" />
           <!-- ? Col text -->

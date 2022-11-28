@@ -6,7 +6,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppHero from './components/AppHero.vue';
 import AppPlaylist from './components/AppPlaylist.vue'
 import AppCTA from './components/AppCTA.vue'
-import AppLatestsArticles from './components/AppLatestsArticles.vue'
+import AppArticlesPlaylists from './components/AppArticlesPlaylists.vue'
 import AppTestimonials from './components/AppTestimonials.vue'
 import AppEvent from './components/AppEvent.vue'
 import AppFooter from './components/AppFooter.vue';
@@ -21,7 +21,7 @@ export default {
     AppPlaylist,
     AppChannel,
     AppCTA,
-    AppLatestsArticles,
+    AppArticlesPlaylists,
     AppTestimonials,
     AppEvent,
     AppFooter
@@ -37,17 +37,17 @@ export default {
 
 <template>
   <!-- ? Header -->
-  <AppHeader/>
+  <AppHeader :obj="store.navbar"/>
   <!-- ? Main -->
   <main>
-    <AppHero/>
+    <AppHero :obj="store.hero"/>
     <AppPlaylist :obj="store.testimonial"/>
-    <AppChannel/>
-    <AppLatestsArticles :obj="store.playlists"/>
-    <AppCTA :obj="store.textCards"/>
-    <AppLatestsArticles :obj="store.articles"/>
+    <AppChannel :obj="store.channelSection"/>
+    <AppArticlesPlaylists :obj="store.playlists"/>
+    <AppCTA :obj="store.cta"/>
+    <AppArticlesPlaylists :obj="store.articles"/>
     <AppTestimonials :obj="store.partners"/>
-    <AppEvent/>
+    <AppEvent :obj="store.event"/>
   </main>
   <!-- ? Footer -->
   <AppFooter :obj="store.footer"/>

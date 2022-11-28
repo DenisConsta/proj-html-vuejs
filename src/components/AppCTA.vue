@@ -26,24 +26,23 @@ export default {
     <!-- ? Top -->
     <div class="top bg-overlay">
       <div class="overlay"></div>
-      <div class="container debug">
+      <div class="container ">
         <div class="row">
-          <div class="col-auto col-lg-8 debug">
-            <h3>Join our mailing list today</h3>
-            <h2>Insider offers & flash sales in your inbox every week.</h2>
+          <div class="col-auto col-lg-8 ">
+            <h3>{{obj.subtitle}}</h3>
+            <h2>{{obj.title}}</h2>
             <!-- ? Input-form -->
-            <div class="my-input-form w-100 debug">
+            <div class="my-input-form w-100 ">
               <input
                 type="text"
                 class="my-input"
                 placeholder="insert your email ...*"
               />
-              <AppButton class="p-6" text="Subscribe" />
+              <AppButton class="p-6" :text="obj.btn.text" />
             </div>
 
             <p>
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus
-              dolor sit amet, consectetur adipiscing elit sed porttitor lectus.
+              {{obj.text}}
             </p>
           </div>
         </div>
@@ -54,7 +53,7 @@ export default {
     <div class="bottom">
       <div class="container">
         <div class="row row-cols-1 row-cols-lg-3">
-          <div v-for="(card, index) in obj" :key="index" class="col">
+          <div v-for="(card, index) in obj.textCards" :key="index" class="col">
             <AppTextCard :info="card" />
           </div>
           

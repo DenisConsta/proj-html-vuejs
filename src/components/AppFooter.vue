@@ -65,7 +65,7 @@ footer {
     color: white;
     padding: 10rem 0 5rem 0;
     .col {
-      @include flexMC("center", "center");
+      @include flexMC("start", "center");
       flex-direction: column;
       text-align: center;
       margin-bottom: 5rem;

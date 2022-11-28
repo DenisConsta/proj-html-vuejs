@@ -14,7 +14,7 @@ export default {
 
 
 <template>
-  <div class="my-card debug " :class="{'my-radius' : info.radius}">
+  <div class="my-card " :class="{'my-radius' : info.radius}">
     <img
       :class="{'my-radius' : info.radius}"
       v-show="info.image != null"
