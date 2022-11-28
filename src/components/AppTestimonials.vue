@@ -59,6 +59,11 @@ export default {
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixin" as *;
 
+section{
+  padding: 4rem 0;
+
+}
+
 .top {
   background-image: url("../assets/images/banner2-2x.jpg");
   background-position: center;
@@ -76,9 +81,9 @@ export default {
   z-index: 1;
 
   .text {
-    padding: 13rem 0;
+    /* padding: 13rem 0; */
+    padding: 13rem 18%;
     z-index: 10;
-    max-width: 65%;
     text-align: center;
 
     h2 {
