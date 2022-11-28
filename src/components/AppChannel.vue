@@ -128,7 +128,7 @@ export default {
   }
 
   h2 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
   }
 }
 </style>

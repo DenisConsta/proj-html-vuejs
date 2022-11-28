@@ -34,7 +34,7 @@ export default {
           </div>
 
           <!-- ? Button -->
-          <AppButton class="d-none d-sm-block" :text="obj.textBtn" />
+          <AppButton class="d-none d-xl-block" :text="obj.textBtn" />
 
           <!-- ? Icons -->
           <i v-for="(icon, i) in obj.icons" :key="i" :class="icon"></i>
