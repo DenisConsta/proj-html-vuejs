@@ -179,7 +179,7 @@ export const store = reactive({
         type: 'bordered',
       },
       {
-        icon: 'fa-regular fa-clock',
+        icon: 'fa-solid fa-child-reaching',
         title: 'Shed those pounds',
         subtitle: 'Find a partner',
         desc: 'At laoreet senectus volutpat diam vel sed sed amet pellentesque. Lobortis ut aliquam risus purus. A tellus ut etiam.',
@@ -223,36 +223,45 @@ export const store = reactive({
   },
 
   /* AppTestimonials */
-  partners: [
-    {
-      image: 'sponsor-1-2x.png',
-      text: 'Tristique aliquam in nullam habitasse nunc, amet vel consectetur. Nulla in suspendisse dolor, aliquet.',
-      anchor: 'Visit Yoga Studio',
-      type: 'unbordered',
-
+  AppTestimonial:{
+    title: '“I’ve failed over and over again in my life. And that is why I succeed.”',
+    text: 'Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. In lacinia lacus donec sed massa in ipsum eros, tristique. Gravida suspendisse etiam in iaculis',
+    btn:{
+      text: 'Buy Avada today',
+      after: 'fa-solid fa-chevron-right'
     },
-    {
-      image: 'sponsor-2-2x.png',
-      text: 'Feugiat etiam dui mauris pharetra mauris sed pharetra. Convallis sapien ornare cras faucibus nulla porta dui a.',
-      anchor: 'Join Fitness Center',
-      type: 'unbordered',
-
-    },
-    {
-      image: 'sponsor-3-2x.png',
-      text: 'Nisl at quam adipiscing montes, nec, adipiscing commodo aliquam tincidunt. Ligula in habitant et sagittis imperdiet.',
-      anchor: 'Learn about FC',
-      type: 'unbordered',
-
-    },
-    {
-      image: 'sponsor-4-2x.png',
-      text: 'Proin in viverra maecenas et mattis ut nibh enim. Gravida ultricies mi porta lacus. Et posuere velit sed nec eleifend.',
-      anchor: 'Visit Power Gym',
-      type: 'unbordered',
-
-    },
-  ],
+    partners: [
+      {
+        image: 'sponsor-1-2x.png',
+        text: 'Tristique aliquam in nullam habitasse nunc, amet vel consectetur. Nulla in suspendisse dolor, aliquet.',
+        anchor: 'Visit Yoga Studio',
+        type: 'unbordered',
+  
+      },
+      {
+        image: 'sponsor-2-2x.png',
+        text: 'Feugiat etiam dui mauris pharetra mauris sed pharetra. Convallis sapien ornare cras faucibus nulla porta dui a.',
+        anchor: 'Join Fitness Center',
+        type: 'unbordered',
+  
+      },
+      {
+        image: 'sponsor-3-2x.png',
+        text: 'Nisl at quam adipiscing montes, nec, adipiscing commodo aliquam tincidunt. Ligula in habitant et sagittis imperdiet.',
+        anchor: 'Learn about FC',
+        type: 'unbordered',
+  
+      },
+      {
+        image: 'sponsor-4-2x.png',
+        text: 'Proin in viverra maecenas et mattis ut nibh enim. Gravida ultricies mi porta lacus. Et posuere velit sed nec eleifend.',
+        anchor: 'Visit Power Gym',
+        type: 'unbordered',
+  
+      },
+    ],
+  },
+  
 
   /* AppEvent */
   event:{

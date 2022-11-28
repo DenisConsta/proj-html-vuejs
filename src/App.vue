@@ -46,7 +46,7 @@ export default {
     <AppArticlesPlaylists :obj="store.playlists"/>
     <AppCTA :obj="store.cta"/>
     <AppArticlesPlaylists :obj="store.articles"/>
-    <AppTestimonials :obj="store.partners"/>
+    <AppTestimonials :obj="store.AppTestimonial"/>
     <AppEvent :obj="store.event"/>
   </main>
   <!-- ? Footer -->

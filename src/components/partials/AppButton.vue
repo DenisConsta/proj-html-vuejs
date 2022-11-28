@@ -7,14 +7,6 @@ export default {
     beforeIcon: String,
     afterIcon: String,
   },
-  methods:{
-
-  },
-  computed:{
-    
-    
-  }
-
 }
 </script>
 
@@ -38,7 +30,7 @@ button{
   color: white;
   border-radius: 1.6rem;
   padding: .8rem 2rem;
-
+  transition: .3s all;
   /* rivedere */
 
   span{
@@ -48,6 +40,20 @@ button{
   i{
     font-size: .9rem;
   }
+
+  &:hover{
+    background-color: $color-burntSienna;
+  }
+
+  &.uncolored {
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px solid darken($color-jumbo, 30%);
+  transition: .3s all;
+  &:hover{
+    background-color: white;
+    color: black;
+  }
+}
 }
 
 

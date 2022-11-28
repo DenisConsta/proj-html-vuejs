@@ -74,13 +74,18 @@ header {
         @include reset-list;
         @include flexMC("center", "center");
         gap: 2rem;
+        
+        li{
+          font-weight: 500;
+        }
       }
+
+
 
       li a,
       i {
         cursor: pointer;
         color: $color-silver;
-
         &.active,
         &:hover {
           color: $color-white;

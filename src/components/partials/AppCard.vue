@@ -6,22 +6,23 @@ export default {
       default: () => ({}),
     },
   },
-  data() {
-    return {};
-  },
 };
 </script>
 
-
 <template>
-  <div class="my-card " :class="{'my-radius' : info.radius}">
+  <div class="my-card" :class="{ 'my-radius': info.radius }">
+    <div class="hover-effect" :class="{ 'my-radius': info.radius }"></div>
     <img
-      :class="{'my-radius' : info.radius}"
+      :class="{ 'my-radius': info.radius }"
       v-show="info.image != null"
       :src="`/src/assets/images/${info.image}`"
       alt=""
     />
-    <div v-show="info.overlay" class="overlay" :class="{' my-radius' : info.radius}"></div>
+    <div
+      v-show="info.overlay"
+      class="overlay"
+      :class="{ ' my-radius': info.radius }"
+    ></div>
     <div v-show="info.play" class="play">
       <i class="fa-solid fa-play"></i>
     </div>
@@ -31,7 +32,6 @@ export default {
     </div>
   </div>
 </template>
-
 
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
@@ -43,6 +43,23 @@ export default {
   flex-direction: column;
   position: relative;
   @include flexMC("end", "start");
+  cursor: pointer;
+
+  &:hover {
+    .hover-effect {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(40, 97, 255, 0.15) 25%,
+        rgb(53, 39, 255, 0.4) 60%
+      );
+      z-index: 10;
+    }
+  }
 
   img {
     z-index: 0;
@@ -54,7 +71,6 @@ export default {
     width: 100%;
     height: 100%;
   }
-
   .overlay {
     background: linear-gradient(
       to bottom,
@@ -62,9 +78,8 @@ export default {
       rgba(0, 0, 0, 0.5) 60%
     );
   }
-
   .text {
-    z-index: 1;
+    z-index: 100;
 
     h4 {
       color: $color-yellow;

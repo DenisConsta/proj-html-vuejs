@@ -1,78 +1,60 @@
 <script>
-
-import AppButton from './partials/AppButton.vue';
-import AppTextCard from './partials/AppTextCard.vue';
+import AppButton from "./partials/AppButton.vue";
+import AppTextCard from "./partials/AppTextCard.vue";
 
 export default {
   name: "AppTestimonials",
   components: {
     AppButton,
     AppTextCard,
-
   },
-  props:{
+  props: {
     obj: Object,
-
-  },  
+  },
 };
 </script>
 
 <template>
-
   <!-- ? Top -->
-  <section class="top bg-overlay ">
+  <section class="top bg-overlay">
     <div class="overlay"></div>
     <div class="container">
-      <div class="text ">
-        <h2>
-          “I’ve failed over and over again in my life. And that is why I
-          succeed.”
-        </h2>
-
-        <p>
-          Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. In
-          lacinia lacus donec sed massa in ipsum eros, tristique. Gravida
-          suspendisse etiam in iaculis
-        </p>
-
-        <AppButton text="Buy Avada today" afterIcon="fa-solid fa-chevron-right"/>
-
+      <div class="text">
+        <h2>{{ obj.title }}</h2>
+        <p class="desc">{{ obj.text }}</p>
+        <AppButton :text="obj.btn.text" :afterIcon="obj.btn.after" />
       </div>
     </div>
   </section>
 
   <!-- ? Bottom -->
-  <section class="bottom ">
-
+  <section class="bottom">
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-        <div v-for="(card, index) in obj" :key="index" class="col ">
-          <AppTextCard :info="card"/>
+        <div v-for="(card, index) in obj.partners" :key="index" class="col">
+          <AppTextCard :info="card" />
         </div>
       </div>
     </div>
   </section>
-
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixin" as *;
 
-section{
+section {
   padding: 4rem 0;
-
 }
 
 .top {
   background-image: url("../assets/images/banner2-2x.jpg");
   background-position: center;
   position: relative;
-
   color: white;
 }
 
-.bottom{
+.bottom {
   color: black;
 }
 .container {
@@ -81,7 +63,6 @@ section{
   z-index: 1;
 
   .text {
-    /* padding: 13rem 0; */
     padding: 13rem 18%;
     z-index: 10;
     text-align: center;
@@ -92,8 +73,7 @@ section{
     }
 
     p{
-      font-size: 1.4rem;
-      color: lightgray;
+      margin: 2rem 0;
     }
   }
 }

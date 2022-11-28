@@ -64,7 +64,6 @@ section {
       margin-bottom: 2rem;
     }
   }
-
   .testimonial {
     padding-bottom: 12rem;
     h2 {
@@ -73,7 +72,6 @@ section {
       padding: 2rem 8rem;
       margin-bottom: 1.5rem;
     }
-
     .avatar {
       @include flexMC("center", "center");
       gap: 1rem;

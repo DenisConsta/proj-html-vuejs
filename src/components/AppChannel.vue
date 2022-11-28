@@ -46,7 +46,7 @@ export default {
               </div>
             </div>
 
-            <p>{{ obj.text }}</p>
+            <p class="desc">{{ obj.text }}</p>
 
             <AppButton
               :class="obj.btn.classes"
@@ -117,17 +117,13 @@ export default {
     }
   }
 
+
   h5 {
     font-size: 1.5rem;
   }
 
   h2 {
     font-size: 3.5rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-    color: $color-jumbo;
   }
 }
 </style>

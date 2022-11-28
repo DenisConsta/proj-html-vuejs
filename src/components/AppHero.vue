@@ -22,7 +22,7 @@ export default {
         <div class="col">
           <h3 class="my-red">{{ obj.subtitle }}</h3>
           <h1>{{ obj.title }}</h1>
-          <p>{{ obj.text }}</p>
+          <p class="desc">{{ obj.text }}</p>
 
           <!-- ? Buttons -->
           <div class="buttons">
@@ -52,8 +52,6 @@ export default {
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixin" as *;
 
-
-
 section {
   height: 670px;
   background-image: url("../assets/images/slider82x-scaled.jpg");
@@ -68,7 +66,12 @@ section {
   }
 
   h1 {
-    font-size: 3.8rem;
+    font-size: 4.5rem;
+  }
+
+  p,
+  h1,
+  .buttons {
     white-space: nowrap;
   }
   .buttons {

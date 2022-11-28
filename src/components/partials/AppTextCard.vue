@@ -78,6 +78,11 @@ div {
       font-size: 1.1rem;
       font-weight: 600;
       text-decoration: none;
+      transition: .3s all;
+
+      &:hover{
+        color: $color-dodgerBlue;
+      }
 
       & i {
         font-size: 0.8rem;

@@ -35,18 +35,11 @@ li {
   color: $color-dodgerBlue;
 }
 
-button.uncolored {
-  background-color: rgba(0, 0, 0, 0);
-  border: 3px solid darken($color-jumbo, 30%);
-}
-
 .bg-overlay {
   background-size: cover;
   background-position: top right;
   position: relative;
 }
-
-
 
 .overlay {
   position: absolute;
@@ -67,10 +60,31 @@ button.uncolored {
   transform: translate(-50%, -50%);
   display: inline-block;
   cursor: pointer;
-
-  padding: 2rem 2.3rem;
+  z-index:100;
+  padding: 5% 6%;
   border-radius: 50%;
 
   color: $color-dodgerBlue;
   background-color: white;
+  transition: .3s all;
+  &:hover{
+    color: $color-burntSienna;
+  }
+}
+
+.desc{
+  font-size: 1.4rem;
+  color: lighten(#78787a, 10%);
+}
+
+.sectionTitle{
+  font-size: 3.5rem;
+}
+
+.my-red{
+  color: $color-red;
+}
+
+.my-hover-color{
+  color: $color-dodgerBlue;
 }
