@@ -50,7 +50,7 @@ export default {
     <AppEvent/>
   </main>
   <!-- ? Footer -->
-  <AppFooter/>
+  <AppFooter :obj="store.footer"/>
 </template>
 
 <style lang="scss">

@@ -185,7 +185,25 @@ export const store = reactive({
 
     },
 
-  ]
+  ],
 
+  footer:{
+    left:{
+      logo: 'logo.png',
+      text: 'Ac aliquam neque sagittis diam faucibus vitae purus turpis phasellus. Pellentesque consectetur amet purus ultrices mauris.',
+      icons:['fa-brands fa-facebook-f', 'fa-brands fa-twitter','fa-brands fa-youtube', 'fa-brands fa-instagram', 'fa-brands fa-linkedin-in'  ],
+    },
+    center:{
+      title: 'Recent posts',
+      list: ['The best protein shake', 'Ultimate cardio workout','New juices available now', 'Tips to find training partners', '20 best healthy recipes']
+    },
+    right:{
+      title: 'Contact informations',
+      address: '4746 Tipple Road Michigan 48449',
+      mobile: 'Mobile : 1.800.000.0000',
+      email: 'Email : info@your-company.com',
+    },
+    copyright: '© Copyright 2012 - 2022 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress',
+  }
 
 });
