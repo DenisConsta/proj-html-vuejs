@@ -61,7 +61,7 @@ section * {
 section {
   height: 670px;
   background-image: url("../assets/images/slider82x-scaled.jpg");
-
+  overflow: hidden;
   color: white;
 
   .container .row > * {
@@ -69,10 +69,6 @@ section {
     flex-direction: column;
     gap: 2rem;
     z-index: 1;
-  }
-
-  h1 {
-    word-break: normal;
   }
 
   h1 {

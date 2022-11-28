@@ -1,5 +1,7 @@
 <script>
 
+import { store } from './data/store';
+
 import AppHeader from './components/AppHeader.vue';
 import AppHero from './components/AppHero.vue';
 import AppPlaylist from './components/AppPlaylist.vue'
@@ -23,6 +25,12 @@ export default {
     AppTestimonials,
     AppEvent,
     AppFooter
+  },
+  data(){
+    return{
+      store,
+
+    }
   }
 }
 </script>
@@ -33,12 +41,12 @@ export default {
   <!-- ? Main -->
   <main>
     <AppHero/>
-    <AppPlaylist/>
+    <AppPlaylist :obj="store.testimonial"/>
     <AppChannel/>
-    <AppLatestsArticles/>
-    <AppCTA/>
-    <AppLatestsArticles/>
-    <AppTestimonials/>
+    <AppLatestsArticles :obj="store.playlists"/>
+    <AppCTA :obj="store.textCards"/>
+    <AppLatestsArticles :obj="store.articles"/>
+    <AppTestimonials :obj="store.partners"/>
     <AppEvent/>
   </main>
   <!-- ? Footer -->

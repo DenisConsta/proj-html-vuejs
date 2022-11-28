@@ -41,14 +41,13 @@ button{
 
   /* rivedere */
 
-  i:first-of-type{
-    margin-right: .3rem;
+  span{
+    padding: 0 .75rem;
   }
 
-  i:last-of-type{
-    margin-left: .3rem;
+  i{
+    font-size: .9rem;
   }
-
 }
 
 

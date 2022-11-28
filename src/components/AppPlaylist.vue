@@ -7,6 +7,9 @@ export default {
   components: {
     AppCard,
   },
+  props: {
+    obj: Object,
+  },
   data() {
     return {
       store,
@@ -19,29 +22,22 @@ export default {
   <section>
     <div class="container debug">
       <div class="row row-cols-1 row-cols-lg-3 debug">
-        <div class="col">
-          <AppCard :info="store.firstCard" />
-        </div>
-        <div class="col">
-          <AppCard :info="store.secondCard" />
-        </div>
-        <div class="col">
-          <AppCard :info="store.thirdCard" />
+
+        <!-- ? Col -->
+        <div v-for="(card, index) in obj.cards" :key="index" class="col">
+          <AppCard :info="card" />
         </div>
       </div>
 
       <!-- ? Testimonial -->
       <div class="testimonial">
-        <h2>
-          "How you respond to the challenge in the second half will determine
-          what you become after the game, whether you are a winner or a loser."
-        </h2>
+        <h2>{{ obj.blockquote }}</h2>
 
         <!-- ? Avatar -->
         <div class="avatar">
-          <img src="../assets/images/avatar-1-2x.jpg" alt="" />
-          <h5>Brad Johnson</h5>
-          <h6>Las Vegas</h6>
+          <img :src="`/src/assets/images/${obj.avatar.image}`"  alt="" />
+          <h5>{{ obj.avatar.name }}</h5>
+          <h6>{{ obj.avatar.location }}</h6>
         </div>
       </div>
     </div>
